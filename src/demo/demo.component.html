@@ -1,0 +1,38 @@
+<!-- src/app/weather/weather.component.html -->
+<div class="weather-container">
+    <h1>Simple Weather App</h1>
+  
+    <!-- Search form -->
+    <div>
+      <input 
+        type="text" 
+        placeholder="Enter city name" 
+        [(ngModel)]="city" 
+        (keyup.enter)="getWeather()"
+      />
+      <button (click)="getWeather()">Search</button>
+    </div>
+  
+    <!-- Weather information -->
+    <div *ngIf="weatherData; else noData">
+      <h2>Weather in {{ weatherData.name }}</h2>
+      <div>
+        <h3>{{ weatherData.main.temp }}°C</h3>
+        <div>
+          <span [innerHTML]="getWeatherIcon(weatherData.weather[0].description)"></span>
+          <p>{{ getWeatherMessage(weatherData.weather[0].description) }}</p>
+        </div>
+      </div>
+  
+      <h3>Forecast for the next 3 days</h3>
+      <div *ngFor="let day of forecast">
+        <p>{{ day.date }}: {{ day.temp }}°C, {{ day.condition }}</p>
+      </div>
+    </div>
+  
+    <!-- No data available -->
+    <ng-template #noData>
+      <p>No weather data available. Please enter a city name.</p>
+    </ng-template>
+  </div>
+  

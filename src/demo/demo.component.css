@@ -1,0 +1,33 @@
+/* src/app/weather/weather.component.css */
+.weather-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  h2 {
+    margin-top: 20px;
+  }
+  
+  h3 {
+    margin: 10px 0;
+  }
+  
+  span {
+    font-size: 48px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
