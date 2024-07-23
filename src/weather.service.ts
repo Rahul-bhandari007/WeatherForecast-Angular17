@@ -6,7 +6,7 @@ import { forkJoin, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WeatherService {
-  private apiKey = 'cfb5fb7e8fc4c8ef1570ff6bba009871';
+  private apiKey = 'Your API Key';
   private apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
   private forecastApiUrl = 'https://api.openweathermap.org/data/2.5/forecast';
 
